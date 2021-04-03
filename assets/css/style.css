@@ -106,6 +106,12 @@ body{
     margin-right: 80px;
 }
 
+@media (max-width: 480px) {
+    .header__logo{
+        margin-right: auto;
+    }
+}
+
 .header__logo-link{
     font-weight: bold;
     font-size: 24px;
