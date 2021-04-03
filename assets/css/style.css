@@ -47,6 +47,7 @@ src: local(''),
 :root{
     --content-width: 1050px;
     --bgr-btn:#23A6F0;
+    --bgr-white:#FAFAFA;
     --mob-padding:20px;
     --margin-box:15px;
 }
@@ -372,10 +373,6 @@ body{
 @media (max-width: 1024px) {
     .promo__aside {
         display: block;
-        /* flex-direction: column;
-        align-items: center; */
-        /* margin-right: calc(var(--margin-box) * -1);
-        margin-left: calc(var(--margin-box) * -1); */
         position: relative;
         z-index: 2;  
         bottom: 0;     
@@ -433,4 +430,96 @@ body{
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+}
+
+/* Features */
+.features {
+    padding-top: 204px;
+    background-color: var(--bgr-white);
+}
+
+@media (max-width: 768px) {
+    .features {
+        padding-top: 0;
+    }
+}
+.features__bgr-white{
+    background-color: #FFFFFF;
+    
+}
+
+.features__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 135px;
+    padding-top: 137px;
+}
+
+@media (max-width: 768px) {
+    .features__wrap {
+        padding: 120px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .features__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.features__box {
+    width: calc(100% /12 * 4 - var(--margin-box) * 2);
+    padding: 0 62px;
+    text-align: center; 
+}
+
+@media (max-width: 1024px) {
+    .features__box {        
+        padding: 0 20px;
+        width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .features__box {        
+        padding-bottom: 110px;
+    }
+    .features__box:last-child {        
+        padding-bottom: 0;
+    }
+}
+
+.features__img-media{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .features__img-media{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .features__img{
+        display: none;
+    }
+}
+
+.features__title {
+    margin-top: 31px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+}
+
+.features__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #737373;
 }
