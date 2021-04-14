@@ -66,6 +66,7 @@
    --content-width: 1050px;
    --bgr-btn: #23A6F0;
    --bgr-body: #FAFAFA;
+   --bgr-dark: #252B42;
    --mob-padding: 20px;
    --margin-box: 15px;
 }
@@ -93,6 +94,16 @@ body {
    left: 0;
    width: 100%;
    z-index: 2;
+}
+
+.header__fixed-bgr {
+   background-color: rgb(32, 40, 100);
+   z-index: 10;
+   
+}
+
+.header__scroll-color {
+   color: black;   
 }
 
 @media (max-width: 768px) {
@@ -550,7 +561,7 @@ body {
    color: #737373;
 }
 
-/* Reviews */
+/* -------------------------Reviews --------------------------*/
 
 .reviews {
    padding-top: 112px;
@@ -563,16 +574,17 @@ body {
    margin-right: auto;
 }
 
-.reviews__title {
+.title-stile-h2 {   
    font-weight: bold;
    font-size: 40px;
    margin-bottom: 10px;
 }
 
-.reviews__subtitle {
+.subtitle-style {
    font-weight: 500;
    font-size: 14px;
    line-height: 20px;
+   color: #737373;
 }
 
 /* -----------------Slider------------------------- */
@@ -612,10 +624,6 @@ body {
 
 /* clients */
 
-.clients {}
-
-.container {}
-
 .clients__logo {
    display: flex;
    flex-wrap: wrap;
@@ -647,9 +655,7 @@ body {
    }
 }
 
-
-
-.clients__Newsletter {
+.clients__newsletter {
    background: linear-gradient(270deg, #D71489 -1.04%, #004788 100%);
    border-radius: 2px;
    display: flex;
@@ -661,14 +667,16 @@ body {
 }
 
 @media (max-width: 768px) {
-   .clients__Newsletter {
+   .clients__newsletter {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-right: -20px;
+      margin-left: -20px;
    }
 }
 
-.clients__Newsletter-text {
+.clients__newsletter-text {
    max-width: 260px;
    font-size: 24px;
    line-height: 32px;
@@ -678,13 +686,13 @@ body {
 }
 
 @media (max-width: 768px) {
-   .clients__Newsletter-text {
+   .clients__newsletter-text {
       padding-bottom: 30px;
       text-align: center;
    }
 }
 
-.clients__Newsletter-form {
+.clients__newsletter-form {
    border: 1px solid #E6E6E6;
    background: #F9F9F9;
    border-radius: 5px;
@@ -694,12 +702,12 @@ body {
 }
 
 @media (max-width: 768px) {
-   .clients__Newsletter-form {      
+   .clients__newsletter-form {      
       min-width: 20%;
    }
 }
 
-.clients__Newsletter-input {
+.clients__newsletter-input {
    padding-top: 15px;
    padding-bottom: 15px;
    padding-left: 20px;
@@ -707,7 +715,7 @@ body {
    border: none;   
 }
 
-.clients__Newsletter-button {
+.clients__newsletter-button {
    padding: 15px 22px;
    font-weight: normal;
    font-size: 14px;
@@ -718,3 +726,287 @@ body {
    border-bottom-right-radius: 5px;
    cursor: pointer;
 }
+
+/* --------------------------Price-------------------------- */
+
+
+.price {
+   text-align: center;
+   padding-top: 112px;
+}
+
+.price__subtitle {
+   display: inline-block;
+   max-width: 470px;
+}
+
+.price__cards {
+   display: flex;
+   max-width: 985px;
+   margin-left: auto;
+   margin-right: auto;
+   flex-wrap: wrap;
+   margin-top: 120px;
+   margin-bottom: 112px;
+}
+
+@media (max-width: 1024px) {
+   .price__cards {
+      margin-top: 30px;
+      margin-bottom: 81px;
+   }
+}
+
+.price__card {
+   display: flex;
+   flex-direction: column;
+   padding: 50px 40px;
+   align-items: center;
+   width: calc(100% / 12 * 4 - 2px);
+   border: 1px solid #23A6F0;
+   border-radius: 10px;
+   margin-left: 1px;
+   transition: 0.2s;
+   background: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+   .price__card {
+      width: calc(100%);
+      margin-top: 30px;
+      border-radius: 0;
+   }
+}
+
+.price__card:hover {
+   background:var(--bgr-dark);
+   transform: scaleY(1.05) translateY(-16px);
+   color: white;
+}
+
+.price__card:hover .price__card-item{
+   color: white;
+}
+
+.price__card-title {
+   font-weight: bold;
+   font-size: 24px;
+}
+
+.price__card-subtitle {
+   font-weight: bold;
+   font-size: 16px;
+   line-height: 24px;
+   color: #737373;
+   letter-spacing: 0.1px;
+   margin-top: 35px;
+   margin-bottom: 35px;
+   width: 165px;
+}
+
+.price__card-cost {
+   display: block;
+   font-weight: bold;
+   font-size: 40px;
+   line-height: 57px;
+   color: var(--bgr-btn);
+   padding-left: 25px;
+}
+
+.price__card-cost sup {
+   font-weight: bold;
+   font-size: 16px;
+   line-height: 24px;   
+   vertical-align: text-top;
+   padding-left: 10px;
+}
+
+.price__card-cost::after {
+   content: "Per Month";
+   display: inline-block;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 24px;
+   color: #8EC2F2;
+   position: relative;
+   left: -10px;
+}
+
+.price__card-list {
+   list-style: none;
+   text-align: left;
+}
+
+.price__card-item {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 24px;
+   color: #252B42;
+   display: flex;
+   align-items: center;
+   margin-bottom: 15px;
+}
+
+.price__card-item_green::before {
+   content: url(../img/price/green.svg);
+   padding-right: 10px;
+}
+
+.price__card-item_grey::before {
+   content: url(../img/price/grey.svg);
+   padding-right: 10px;
+}
+
+.price__card-button {
+   width: 100%;
+   background-color: var(--bgr-btn);
+   border: none;
+   border-radius: 5px;
+}
+
+@media (max-width: 1024px) {
+   .price__card-button {
+      width: 269px;
+   }
+}
+
+@media (max-width: 400px) {
+   .price__card-button {
+      width: 100%;
+   }
+}
+
+
+/*------------------------- Spread--------------- */
+
+.spread {
+   background: var(--bgr-dark);
+}
+
+.spread__content {
+   display: flex;
+   flex-wrap: wrap;
+   padding-top: 100px;
+   padding-bottom: 478px;
+}
+
+.spread__content_size{
+   width: calc(100% / 12 * 6);
+}
+
+@media (max-width: 850px) {
+   .spread__content_size{
+      width: calc(100%);
+      
+   }
+}
+
+.spread__content-title {
+   font-weight: bold;
+   font-size: 40px;
+   line-height: 57px;
+   color: #FFFFFF;
+   margin-bottom: 15px;
+}
+
+.spread__content-subtitle {
+   display: block;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 20px;
+   color: #FFFFFF;
+   max-width: 456px;
+}
+
+.spread__content-map {
+   text-align: right;
+   margin-top: auto;
+   margin-bottom: auto;
+}
+
+@media (max-width: 850px) {
+   .spread__content-map {
+      margin-top: 130px;
+   }
+   
+}
+
+
+@media (max-width: 850px) {
+   .spread__content-img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+   }   
+}
+
+
+/* ---------------------Registration------------------ */
+.registration{}
+
+.container {}
+
+.registration__content {}
+
+.registration__bgr {}
+
+.registration__title {
+   font-weight: bold;
+   font-size: 24px;
+   color: #252B42;
+   margin-bottom: 40px;
+   text-align: center;
+}
+
+.registration__form {
+   padding: 40px 50px;
+   background: #FFFFFF;
+}
+
+.form-size::placeholder {
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 28px;
+   color: #737373;
+   padding-left: 21px;
+}
+
+.form-text {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 24px;
+   color: #252B42;
+}
+
+.form-size {
+   width: 100%;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   height: 50px;
+   background: #F9F9F9;
+   border: 1px solid #DDDDDD;
+   border-radius: 5px;
+}
+
+.registration__form-name-title {}
+
+.registration__form-name-input {}
+
+.registration__form-email-title {}
+
+.registration__form-email-input {}
+
+.registration__form-depart-title {}
+
+.registration__form-depart-list {}
+
+.registration__form-depart-item {}
+
+.registration__form-time-title {}
+
+.registration__form-time-list {}
+
+.registration__form-time-item {}
+
+.registration__form-button {}

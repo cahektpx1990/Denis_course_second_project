@@ -16,7 +16,7 @@
             <div class="header__logo">
                <a class="header__logo-link" href="#">BrandName</a>
             </div>
-               <div class="header__menu-wrap header__menu-wrap_visible">
+               <div class="header__menu-wrap">
                   <nav class="header__nav">
                         <ul class="header__menu">
                            <li class="header__menu-item">
@@ -131,8 +131,8 @@
       <section class="reviews">
          <div class="container">
                <div class="reviews__wrap">
-                  <h2 class="reviews__title">Industry</h2>
-                  <p class="reviews__subtitle">Problems trying to resolve the conflict between 
+                  <h2 class="reviews__title title-stile-h2">Industry</h2>
+                  <p class="reviews__subtitle subtitle-style">Problems trying to resolve the conflict between 
                      the&nbsp;two&nbsp;major&nbsp;realms of Classical physics: Newtonian mechanics </p>
                </div>            
                
@@ -284,11 +284,120 @@
                   <img src="./assets/img/clients/cl_6.svg" alt="Logo client" class="clients__logo-img" >
                </div>               
             </div>
-            <div class="clients__Newsletter">
-               <p class="clients__Newsletter-text">Subscribe For&nbsp;Latest Newsletter</p>
-               <form class="clients__Newsletter-form" method="POST">
-                  <input type="text" placeholder="Your Email" class="clients__Newsletter-input">
-                  <button type="submit" class="clients__Newsletter-button">Subscribe</button>                  
+            <div class="clients__newsletter">
+               <p class="clients__newsletter-text">Subscribe For&nbsp;Latest Newsletter</p>
+               <form class="clients__newsletter-form" method="POST">
+                  <input type="text" placeholder="Your Email" class="clients__newsletter-input">
+                  <button type="submit" class="clients__newsletter-button">Subscribe</button>                  
+               </form>
+            </div>
+         </div>
+      </section>
+
+      <!------ Price ---------->
+      <section class="price">
+         <div class="container">
+            <h2 class="title-stile-h2">Pricing</h2>
+            <span class="price__subtitle subtitle-style">Problems trying to resolve the conflict between <br class="price__carryover">
+               the&nbsp;two&nbsp;major realms of Classical physics: Newtonian mechanics </span>
+               <div class="price__cards">
+                  <div class="price__card">
+                     <h3 class="price__card-title">FREE</h3>
+                     <span class="price__card-subtitle">Organize across all 
+                        apps by hand</span>  
+
+                        <span class="price__card-cost">0<sup>$</sup></span>  
+                     <ul class="price__card-list">
+                        <li class="price__card-item price__card-item_green">Unlimited product updates</li>
+                        <li class="price__card-item price__card-item_green">Unlimited product updates</li>
+                        <li class="price__card-item price__card-item_green">Unlimited product updates</li>
+                        <li class="price__card-item price__card-item_grey">1GB  Cloud storage</li>
+                        <li class="price__card-item price__card-item_grey">Email and community support</li>
+                     </ul>
+                     <button class="price__card-button btn">Try for free</button>
+                  </div>
+                  <div class="price__card">
+                     <h3 class="price__card-title">STANDARD</h3>
+                     <span class="price__card-subtitle">Organize across all 
+                        apps by hand</span>  
+
+                        <span class="price__card-cost">9,99<sup>$</sup></span>  
+                     <ul class="price__card-list">
+                        <li class="price__card-item price__card-item_green">Unlimited product updates</li>
+                        <li class="price__card-item price__card-item_green">Unlimited product updates</li>
+                        <li class="price__card-item price__card-item_green">Unlimited product updates</li>
+                        <li class="price__card-item price__card-item_grey">1GB  Cloud storage</li>
+                        <li class="price__card-item price__card-item_grey">Email and community support</li>
+                     </ul>
+                     <button class="price__card-button btn">Try for free</button>
+                  </div>
+                  <div class="price__card">
+                     <h3 class="price__card-title">PREMIUM</h3>
+                     <span class="price__card-subtitle">Organize across all 
+                        apps by hand</span>  
+
+                        <span class="price__card-cost">19,99<sup>$</sup></span>  
+                     <ul class="price__card-list">
+                        <li class="price__card-item price__card-item_green">Unlimited product updates</li>
+                        <li class="price__card-item price__card-item_green">Unlimited product updates</li>
+                        <li class="price__card-item price__card-item_green">Unlimited product updates</li>
+                        <li class="price__card-item price__card-item_grey">1GB  Cloud storage</li>
+                        <li class="price__card-item price__card-item_grey">Email and community support</li>
+                     </ul>
+                     <button class="price__card-button btn">Try for free</button>
+                  </div>
+               </div>
+
+         </div>
+      </section>
+
+      <!------ Spread ---------->
+      <section class="spread">
+         <div class="container">
+            <div class="spread__content">
+               <div class="spread__content-text spread__content_size">
+                  <h2 class="spread__content-title">We Have Branches All 
+                     Over The World</h2>
+                  <span class="spread__content-subtitle">The gradual accumulation of information about atomic and 
+                     small-scale behaviour during the first quarter of the 20th 
+                     century, which gave some indications about how small things 
+                     do behave, produced an increasing confusion which was 
+                     Heisenberg, and Born.</span>
+               </div>
+               <div class="spread__content-map spread__content_size">
+                  <img src="./assets/img/spread/map.png" alt="Map" class="spread__content-img">
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!------ Registration ---------->
+
+      <section class="registration">
+         <div class="container">
+            <div class="registration__content">
+               <div class="registration__bgr"></div>
+               <form action="#!" class="registration__form">
+                  <h3 class="registration__title">Book Appointment</h3>
+                  <label class="registration__form-name-title form-text" for="name" >Name *</label><br>
+                  <input  class="registration__form-name-input form-size" type="text" id="name" name='name' placeholder="Full Name *"><br>
+                  <label class="registration__form-email-title form-text" for="wmail">Email address *</label><br>
+                  <input class="registration__form-email-input form-size" type="email" id="email" name='email' placeholder="example@gmail.com  "><br>
+                  <label class="registration__form-depart-title form-text" for="depart">Departement *</label><br>
+                  <select class="registration__form-depart-list form-size" name="depart" id="depart">
+                     <option class="registration__form-depart-item" value="sel1">Select1</option>
+                     <option class="registration__form-depart-item" value="sel2">Select2</option>
+                     <option class="registration__form-depart-item" value="sel3">Select3</option>
+                     <option class="registration__form-depart-item" value="sel4">Select4</option>
+                  </select><br>
+                  <label class="registration__form-time-title form-text" for="time">Time *</label><br>
+                  <select class="registration__form-time-list form-size" name="time" id="time">
+                     <option class="registration__form-time-item" value="time1">12:00</option>
+                     <option class="registration__form-time-item" value="time2">13:00</option>
+                     <option class="registration__form-time-item" value="time3">15:00</option>
+                     <option class="registration__form-time-item" value="time4">18:00</option>
+                  </select><br>
+                  <button class="registration__form-button" type="button">Book Appointment</button>
                </form>
             </div>
          </div>

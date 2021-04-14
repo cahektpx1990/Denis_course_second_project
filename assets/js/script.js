@@ -1,3 +1,21 @@
+window.onscroll = function showHeader () {
+   let headerBgr = document.querySelector('.header');
+      if(window.pageYOffset > 50){
+      headerBgr.classList.add('header__fixed-bgr');
+   } else {
+      headerBgr.classList.remove('header__fixed-bgr');
+}
+};
+
+// window.onscroll = function colorBlack () {
+//    let headerColor = document.querySelector('.header__logo-link');
+
+//    if(window.pageYOffset > 50){
+//       headerColor.classList.add('header__scroll0-color');
+//    };
+// };
+
+
 const burgerEl = document.querySelector('.header__burger');
 const menuWrapEl = document.querySelector('.header__menu-wrap');
 
