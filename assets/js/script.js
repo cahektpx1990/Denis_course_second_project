@@ -56,3 +56,10 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 
+// scroll animation
+
+new WOW({
+   offset:       5,
+}).init();
+
+
