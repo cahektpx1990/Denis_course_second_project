@@ -64,9 +64,46 @@ new WOW({
 
 // Theme switch
 
-const switchThemeEl = document.querySelector('.switch');
-switchThemeEl.addEventListener('click', function(event) {
-   document.querySelector('html').classList.toggle('dark-light')
-})
+
+// switchThemeEl.addEventListener('click', function(event) {
+//    document.querySelector('html').classList.toggle('dark-light')
+// });
+
+// local Storage
+let darkMode = localStorage.getItem('dark-mode');
+const darkModeToggle = document.querySelector('.switch');
+
+const enableDarkMode = () => {
+   // 1. Add the class to the body
+   document.body.classList.add('dark-mode');
+   // 2. Update darkMode in localStorage
+   localStorage.setItem('dark-mode', 'enabled');
+};
+
+const disableDarkMode = () => {
+   // 1. Remove the class from the body
+   document.body.classList.remove('dark-mode');
+   // 2. Update darkMode in localStorage 
+   localStorage.setItem('dark-mode', null);
+};
+
+if (darkMode === 'enabled') {
+   enableDarkMode();
+};
+
+
+darkModeToggle.addEventListener('click', () => {
+   // get their darkMode setting
+   darkMode = localStorage.getItem('dark-mode'); 
+   
+   // if it not current enabled, enable it
+   if (darkMode !== 'enabled') {
+      enableDarkMode();
+   // if it has been enabled, turn it off  
+   } else {  
+      disableDarkMode(); 
+   }
+});
+
 
 

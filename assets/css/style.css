@@ -76,7 +76,7 @@
    --blue-text-color: #252B42;
 }
 
-.dark-light {
+.dark-mode {
    --bgr-body: #1e1d27;
    --bg-block-color: #1e1d27;
    --title-color: #cccbcb;
@@ -256,6 +256,7 @@ body {
    font-size: 20px;
    transition: 0.5s;
    margin-right: 5px;
+   cursor: pointer;
 
 }
 
