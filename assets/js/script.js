@@ -62,4 +62,11 @@ new WOW({
    offset:       5,
 }).init();
 
+// Theme switch
+
+const switchThemeEl = document.querySelector('.switch');
+switchThemeEl.addEventListener('click', function(event) {
+   document.querySelector('html').classList.toggle('dark-light')
+})
+
 

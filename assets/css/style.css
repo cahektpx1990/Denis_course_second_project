@@ -69,6 +69,19 @@
    --bgr-dark: #252B42;
    --mob-padding: 20px;
    --margin-box: 15px;
+   --text-color: #737373;
+   --white-text-color: #FFFFFF;
+   --bg-block-color: #FFFFFF;
+   --title-color: black;
+   --blue-text-color: #252B42;
+}
+
+.dark-light {
+   --bgr-body: #1e1d27;
+   --bg-block-color: #1e1d27;
+   --title-color: #cccbcb;
+   --blue-text-color: #cccbcb;
+   --bgr-dark: #1e1d27;
 }
 
 body {
@@ -145,7 +158,7 @@ body {
 .header__logo-link {
    font-weight: bold;
    font-size: 24px;
-   color: #FFFFFF;
+   color: var(--white-text-color);
 }
 
 @media (max-width: 768px) {
@@ -205,7 +218,7 @@ body {
 .header__item-link {
    font-weight: 600;
    font-size: 14px;
-   color: #FFFFFF;
+   color: var(--white-text-color);
 }
 
 @media (max-width: 768px) {
@@ -220,7 +233,7 @@ body {
    margin-right: 45px;
    font-weight: bold;
    font-size: 14px;
-   color: #FFFFFF;
+   color: var(--white-text-color);
 }
 
 @media (max-width: 768px) {
@@ -232,6 +245,18 @@ body {
    .header__authorization {
       margin-left: auto;
    }
+}
+
+.header__switch {
+   color: var(--title-color);
+   background-color: var(--bg-block-color);
+   padding: 5px 10px;
+   border-radius: 10px;
+   font-weight: 500;
+   font-size: 20px;
+   transition: 0.5s;
+   margin-right: 5px;
+
 }
 
 .header__bcm {
@@ -482,7 +507,7 @@ body {
 }
 
 .features__bgr {
-   background-color: #FFFFFF;
+   background-color: var(--bg-block-color);
 }
 
 .features__wrap {
@@ -552,13 +577,14 @@ body {
    font-weight: bold;
    font-size: 16px;
    letter-spacing: 0.1px;
+   color: var(--title-color);
 }
 
 .features__text {
    font-weight: 500;
    font-size: 14px;
    line-height: 20px;
-   color: #737373;
+   color: var(--text-color);
 }
 
 /* -------------------------Reviews --------------------------*/
@@ -567,6 +593,10 @@ body {
    padding-top: 112px;
    text-align: center;
    margin-bottom: 200px;
+}
+
+.title-stile-h2 {
+   color: var(--title-color);
 }
 
 .reviews__wrap {
@@ -585,7 +615,7 @@ body {
    font-weight: 500;
    font-size: 14px;
    line-height: 20px;
-   color: #737373;
+   color: var(--text-color);
 }
 
 /* -----------------Slider------------------------- */
@@ -612,7 +642,7 @@ body {
 .reviews__slider-text {
    font-weight: 500;
    font-size: 14px;
-   color: #737373;
+   color: var(--text-color);
    margin-top: 30px;
    margin-bottom: 17px;
 }
@@ -805,7 +835,7 @@ body {
    font-weight: bold;
    font-size: 16px;
    line-height: 24px;
-   color: #737373;
+   color: var(--text-color);
    letter-spacing: 0.1px;
    margin-top: 35px;
    margin-bottom: 35px;
@@ -1050,7 +1080,7 @@ body {
    font-weight: normal;
    font-size: 14px;
    line-height: 28px;
-   color: #737373;
+   color: var(--text-color);
    padding-left: 21px;
 }
 
@@ -1132,7 +1162,7 @@ body {
    font-weight: bold;
    font-size: 24px;
    line-height: 32px;
-   color: #252B42;
+   color: var(--blue-text-color);
    margin-bottom: 10px;
 }
 
@@ -1140,7 +1170,7 @@ body {
    font-weight: 500;
    font-size: 14px;
    line-height: 20px;
-   color: #737373;
+   color: var(--text-color);
 }
 
 .footer__top-button-element {
@@ -1164,7 +1194,7 @@ body {
 
 
 .footer__center {
-   background-color: #FFFFFF;
+   background-color: var(--bg-block-color);
 }
 
 .footer__center-content {
@@ -1204,6 +1234,7 @@ body {
    font-size: 16px;
    line-height: 24px;
    margin-bottom: 20px;
+   color: var(--title-color)
 }
 
 @media (max-width: 560px) {
@@ -1225,7 +1256,7 @@ body {
 
 .footer__center-block-item a {
    text-decoration: none;
-   color: #737373;
+   color: var(--text-color);
 }
 
 .footer__center-contact {
@@ -1247,7 +1278,7 @@ body {
 }
 .footer__center-contact-item a {
    text-decoration: none;
-   color: #737373;
+   color: var(--text-color);
    display: flex;
    align-items: center;
 }
@@ -1258,10 +1289,6 @@ body {
 
 
 /* ----------------footerBottom----------- */
-
-.footer__bottom {}
-
-.container {}
 
 .footer__bottom-content {
    display: flex;
@@ -1281,8 +1308,6 @@ body {
    }
 }
 
-.footer__bottom-block {}
-
 @media (max-width: 560px) {
    .footer__bottom-block {
       max-width: 230px;
@@ -1292,7 +1317,7 @@ body {
 .footer__bottom-text {
    font-weight: 600;
    font-size: 14px;
-   color: #737373;
+   color: var(--text-color);
 }
 
 .footer__bottom-social {
