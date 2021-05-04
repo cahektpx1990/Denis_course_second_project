@@ -1,9 +1,9 @@
 window.onscroll = function showHeader () {
    let headerBgr = document.querySelector('.header');
       if(window.pageYOffset > 50){
-      headerBgr.classList.add('header__fixed-bgr');
+      headerBgr.classList.add('header_fixed-bgr');
    } else {
-      headerBgr.classList.remove('header__fixed-bgr');
+      headerBgr.classList.remove('header_fixed-bgr');
 }
 };
 
@@ -61,6 +61,37 @@ var swiper = new Swiper('.swiper-container', {
 new WOW({
    offset:       5,
 }).init();
+
+
+// Form validation
+const regForm = document.querySelector('.registration__form');
+const formEmailEl = document.querySelector('.registration__form-email-input');
+const emailReg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+const formNameEl = document.querySelector('.registration__form-name-input');
+const nameReg = /^[a-zA-Z ]+$/;
+
+const formPhoneEl = document.querySelector('.registration__form-phone-title');
+const phoneReg = /^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$/;
+
+regForm.addEventListener('submit', function(event){
+   event.preventDefault();
+
+   let mailChecked = emailReg.test(formEmailEl.value);
+   let nameChecked = nameReg.test(formNameEl.value);
+   let phoneChecked = phoneReg.test(formPhoneEl.value);
+
+   !mailChecked ? formEmailEl.classList.add('block_error'): formEmailEl.classList.remove('block_error');
+
+   !nameChecked? formNameEl.classList.add('block_error'): formNameEl.classList.remove('block_error');
+
+   !phoneChecked? formPhoneEl.classList.add('block_error'): formPhoneEl.classList.remove('block_error');   
+
+   // Focus
+   
+   // formPhoneEl.matches(phoneReg) == null? formPhoneEl.innerHTML = 'Help': formPhoneEl.innerHTML = '';
+});
+
 
 // Theme switch
 

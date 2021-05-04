@@ -109,7 +109,7 @@ body {
    z-index: 2;
 }
 
-.header__fixed-bgr {
+.header_fixed-bgr {
    background-color: var(--bgr-dark);
    z-index: 10;
    
@@ -410,7 +410,7 @@ body {
 
 .promo_get:hover, .promo__learn-more:hover {
    background-color: var(--bgr-btn);
-   border: transparent;
+   border-color: transparent;
 }
 
 .promo__aside {
@@ -593,7 +593,7 @@ body {
 .reviews {
    padding-top: 112px;
    text-align: center;
-   margin-bottom: 200px;
+   padding-bottom: 200px;
 }
 
 .title-stile-h2 {
@@ -668,7 +668,7 @@ body {
    flex-wrap: wrap;
    align-items: center;
    padding-bottom: 50px;
-   margin-top: 50px;
+   padding-top: 50px;
 }
 
 .clients__logo-item {
@@ -752,6 +752,7 @@ body {
    padding-left: 20px;
    background-color: transparent;
    border: none;   
+   width: 100%;
 }
 
 .clients__newsletter-button {
@@ -793,6 +794,8 @@ body {
    .price__cards {
       margin-top: 30px;
       margin-bottom: 81px;
+      align-items: center;
+      
    }
 }
 
@@ -814,6 +817,9 @@ body {
       width: calc(100%);
       margin-top: 30px;
       border-radius: 0;
+      max-width: 327px;
+      margin-left: auto;
+      margin-right: auto;
    }
 }
 
@@ -920,6 +926,7 @@ body {
 
 .spread {
    background: var(--bgr-dark);
+   overflow: hidden;
 }
 
 .spread__content {
@@ -992,8 +999,6 @@ body {
 /* ---------------------Registration------------------ */
 .registration {   
    position: relative;
-   height: 416px;
-   margin-bottom: 300px;
 }
 
 @media (max-width: 560px) {
@@ -1038,7 +1043,7 @@ body {
 }
 
 .registration__img {
-   flex-basis: 30%;   
+   width: 30%;   
    background-image: url(../img/spread/family.jpg);
    background-repeat: no-repeat;
    background-position: -590px 0;
@@ -1047,11 +1052,11 @@ body {
 
 @media (max-width: 560px) {
    .registration__img {
-      height: 250px;
       background-image: url(../img/spread/family.jpg);
       background-repeat: no-repeat;
-      background-position: 0;
-      background-size: contain;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
       padding-top: 56%;
    }
 }
@@ -1082,7 +1087,6 @@ body {
    font-size: 14px;
    line-height: 28px;
    color: var(--text-color);
-   padding-left: 21px;
 }
 
 .form-text {
@@ -1100,10 +1104,12 @@ body {
    background: #F9F9F9;
    border: 1px solid #DDDDDD;
    border-radius: 5px;
+   padding-left: 18px;
+   -webkit-appearance: none;
 }
 
 .registration__form-depart-list {
-   padding-left: 18px;
+   
    font-weight: normal;
    font-size: 14px;
 }
@@ -1122,6 +1128,67 @@ body {
    border-radius: 5px;
    border: transparent;
    margin-top: 40px;
+   cursor: pointer;
+   }
+
+   .block_error {
+      border: 1px solid red;
+   }
+
+   .registration__confirm-wrap{
+      margin-top: 15px;
+   }
+   .registration__map {
+      
+      
+      
+   }
+   .registration__map iframe {
+      width: 100%;
+      
+
+   }
+
+   .styled_checkbox {
+      position: relative;
+      display: inline-block; 
+      user-select: none;  
+      padding-left: 25px;
+      cursor: pointer;
+   }
+
+   .styled_checkbox:hover span::before {       
+      background-color: var(--text-color);
+   }
+
+   .styled_checkbox input {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+
+   }
+
+   .styled_checkbox input:checked ~ span::before {
+      background-position: center;
+      background-color: var(--text-color);
+
+   }
+
+   .styled_checkbox span::before {
+      content: "";
+      position: absolute;
+      background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='16' height='16' viewBox='0 0 45.701 45.7' style='enable-background:new 0 0 45.701 45.7;' xml:space='preserve' %3E%3Cg%3E%3Cg%3E%3Cpath d='M20.687,38.332c-2.072,2.072-5.434,2.072-7.505,0L1.554,26.704c-2.072-2.071-2.072-5.433,0-7.504 c2.071-2.072,5.433-2.072,7.505,0l6.928,6.927c0.523,0.522,1.372,0.522,1.896,0L36.642,7.368c2.071-2.072,5.433-2.072,7.505,0 c0.995,0.995,1.554,2.345,1.554,3.752c0,1.407-0.559,2.757-1.554,3.752L20.687,38.332z' fill='white'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: 90%;
+      background-position: center -15px;
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      background-color: #EAEEF2;
+            
+      left: 0;
+      transition: background-color 0.3s, background-position 0.3s;
+
    }
 
    /* ---------------footer------------- */
@@ -1181,11 +1248,14 @@ body {
    padding-right: 40px;
    padding-left: 40px;
    border-radius: 5px;
+}
+
+.footer__top-button {
    margin-right: 38px;
 }
 
 @media (max-width: 560px) {
-   .footer__top-button-element {
+   .footer__top-button {
       margin-top: 50px;
       margin-right: 0;
    }
@@ -1203,6 +1273,8 @@ body {
    flex-wrap: wrap;
    padding-top: 50px;
    padding-bottom: 50px;
+   margin-left: calc(var(--margin-box) * -1);
+   margin-right: calc(var(--margin-box) * -1);
 }
 
 @media (max-width: 560px) {
@@ -1215,19 +1287,27 @@ body {
 
 
 .footer__center-block {
-   width: calc(100% / 12 * 2);
-   margin-left: 5px;
+   width: calc(100% / 12 * 2 - var(--margin-box) * 2);
+   margin-left: var(--margin-box);
+   margin-right: var(--margin-box);
 }
 
-.footer__center-block:first-child {
-   margin-left: 0;
+
+@media (max-width: 768px) {
+   .footer__center-block {
+      width: calc(100% / 12 * 4 - var(--margin-box) * 2);   
+   }
+   .footer__center-block:nth-child(-n+3){
+      margin-bottom: 30px;
+   }
 }
 
 @media (max-width: 560px) {
    .footer__center-block {
       width: 240px;   
-      margin-left: 0;   
+      margin-bottom: 30px;
    }
+   
 }
 
 .footer__center-block-title, .footer__center-contact-title {
@@ -1238,11 +1318,6 @@ body {
    color: var(--title-color)
 }
 
-@media (max-width: 560px) {
-   .footer__center-block-title, .footer__center-contact-title {
-      margin-top: 30px;
-   }
-}
 
 .footer__center-content .footer__center-block:first-child .footer__center-block-title {
    margin-top: 0;
@@ -1261,14 +1336,14 @@ body {
 }
 
 .footer__center-contact {
-   width: calc(100% / 12 * 4);
-   margin-right: -20px;
+   width: calc(100% / 12 * 4 - var(--margin-box) * 2);
+   margin-left: var(--margin-box);
+   margin-right: var(--margin-box);
 }
 
 @media (max-width: 560px) {
    .footer__center-contact {
       width: 240px;
-      margin-right: 0;
    }
 }
 

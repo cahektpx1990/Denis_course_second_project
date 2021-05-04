@@ -387,8 +387,13 @@
                   <h3 class="registration__title">Book Appointment</h3>
                   <label class="registration__form-name-title form-text" for="name" >Name *</label><br>
                   <input  class="registration__form-name-input form-size" type="text" id="name" name='name' placeholder="Full Name *"><br>
-                  <label class="registration__form-email-title form-text" for="wmail">Email address *</label><br>
-                  <input class="registration__form-email-input form-size" type="email" id="email" name='email' placeholder="example@gmail.com  "><br>
+                  <label class="registration__form-email-title form-text" for="email">Email address *</label><br>
+                  <input class="registration__form-email-input form-size" type="email" id="email" name='email' placeholder="example@gmail.com "><br>
+
+                  <label class="registration__form-name-title form-text" for="phone">Phone*</label><br>
+                  <input class="registration__form-phone-title form-size" type="tel" id="phone" name="phone" placeholder="+375 29 1234567"  maxlength="13">
+                  <!-- pattern="^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$" -->
+
                   <label class="registration__form-depart-title form-text" for="depart">Departement *</label><br>
                   <select class="registration__form-depart-list form-size" name="depart" id="depart">
                      <option class="registration__form-depart-item" value="sel1">Select1</option>
@@ -404,8 +409,21 @@
                      <option class="registration__form-time-item" value="time4">18:00</option>
                   </select><br>
                   <input class="registration__form-button btn" type="submit" value="Book Appointment">
+                  <div class="registration__confirm-wrap">
+                     <label class="styled_checkbox">
+                        <input type="checkbox" name="" id="">
+                        <span class="">confirm</span>
+                     </label>
+                  </div>
+
                </form>
+               
             </div>
+            
+            
+         </div>
+         <div class="registration__map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A33a26e5b6991e53dd642eb1d2cfd04ba355570d0934e8f7df9d6f632beef23d6&amp;source=constructor" width="875" height="400" frameborder="0"></iframe>
          </div>
       </section>
    </main>
