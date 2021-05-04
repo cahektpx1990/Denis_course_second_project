@@ -88,13 +88,12 @@ regForm.addEventListener('submit', function(event){
    !phoneChecked? formPhoneEl.classList.add('block_error'): formPhoneEl.classList.remove('block_error');   
 
    // Focus
-   
+
    // formPhoneEl.matches(phoneReg) == null? formPhoneEl.innerHTML = 'Help': formPhoneEl.innerHTML = '';
 });
 
 
 // Theme switch
-
 
 // switchThemeEl.addEventListener('click', function(event) {
 //    document.querySelector('html').classList.toggle('dark-light')
